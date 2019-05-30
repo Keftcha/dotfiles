@@ -16,8 +16,10 @@ python3
 scrot
 setxkbmap
 sudo
+vim
 wpa_supplicant
 xautolock
 xorg
 xorg-xinit
 xrandr
+xterm
