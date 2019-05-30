@@ -1,0 +1,5 @@
+altscreen on
+startup_message off
+autodetach on
+#terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+caption always "%{Wb} %H %{Bk}| %{Ck}%-w%50>%{Cb} %n %t %{-}%+w%<%{- Wk}%{Bk} | %=%{Wb} %c "
