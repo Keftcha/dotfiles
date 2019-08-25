@@ -249,21 +249,17 @@ bar {
 	}
 }
 
-# Set key map in french on the i3's startup
-#exec setxkbmap -layout fr
-
 # Active windown isn't the windows where is the mouse cursor is
 focus_follows_mouse no
 
 # Lock the screen
-#bindsym Control+Mod1+l exec i3lock -i ~/images/.so_long_and_thanks_for_all_the_fish.png
 bindsym Control+Mod1+l exec ~/./lock_screen.sh
 
 # Hide edge borders
 hide_edge_borders smart
 # Windows border
 default_border pixel 2
-## Other
+# Other
 mouse_warping none
 
 ####################################################################################
