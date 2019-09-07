@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Sample using the ANSI escape code in a linux terminal
+
 import os
 
 with open("test_file_for_bash_color_and_effects.txt", "w") as file:
