@@ -1,0 +1,7 @@
+[user]
+	name = Keftcha
+	email = alban.dewilde@gmail.com
+[push]
+	default = matching
+[core]
+	editor = vim
