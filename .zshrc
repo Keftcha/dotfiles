@@ -48,6 +48,7 @@ setopt autocd
 unsetopt rm_star_silent
 unsetopt list_ambiguous
 setopt share_history
+setopt interactivecomments
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
