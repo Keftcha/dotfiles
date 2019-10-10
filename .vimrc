@@ -43,6 +43,9 @@ autocmd Filetype lua set textwidth=79
 
 autocmd BufWritePre * :%s/\s\+$//e
 
+map <C-W>s :split<CR>
+map <C-W>v :vsplit<CR>
+map <C-W>t :tabnew<CR>
 map <C-N> :NERDTreeToggle<CR>
 
 " Python mode options
