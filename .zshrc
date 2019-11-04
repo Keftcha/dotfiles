@@ -93,7 +93,7 @@ alias -s toml=e    # TOML file
 
 # Git
 alias ga="git add"
-alias gc="git commit"
+alias gcm="git commit"
 alias gh="git push"
 alias gl="git pull"
 alias gs="git status"
