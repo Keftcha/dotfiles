@@ -114,11 +114,13 @@ then
 fi
 
 export EDITOR=vim
+
+# prompts variables
 export PS1="%{[31;1m%}%T %{[32m%}%n@%{[32m%}%m%{[01;33m%}:%{[34;1m%}%0~%{[0m%}%{[01;33m%}%#%{[0m%} "
-# export PS2="%{[36;1m%}%_ %{[0m%}> "
-export PS2="%{[0m%}> "
-export RPROMPT=""
+export RPS1="%(?.%{[92;1m%}✔%{[0m%}.%{[91;1m%}✘%{[0m%}"
 # export RPROMPT="%{[36;1m%}%~%{[0m%}"
+# export PS2="%{[36;1m%}%_ %{[0m%}> "
+
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/lib:/usr/local/lib"
 export GOPATH="$HOME/prg/go"
 export PATH="$PATH:$HOME/bin:/usr/lib/go-1.9/bin:$GOPATH/bin:$HOME/.cargo/bin"
