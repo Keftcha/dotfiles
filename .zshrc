@@ -56,6 +56,14 @@ zle -N history-beginning-search-forward-end history-search-end
 # --------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------
+# Functions
+# --------------------------------------------------------------------------
+echo_git_branch() {
+    echo "$(command git symbolic-ref --short HEAD 2> /dev/null)"
+}
+# --------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------
 # Alias
 # --------------------------------------------------------------------------
 alias cls="clear"
@@ -117,10 +125,14 @@ fi
 export EDITOR=vim
 
 # prompts variables
-export PS1="%{[31;1m%}%T %{[32m%}%n@%{[32m%}%m%{[01;33m%}:%{[34;1m%}%0~%{[0m%}%{[01;33m%}%#%{[0m%} "
-export RPS1="%(?.%{[92;1m%}✔%{[0m%}.%{[91;1m%}✘%{[0m%}"
-# export RPROMPT="%{[36;1m%}%~%{[0m%}"
-# export PS2="%{[36;1m%}%_ %{[0m%}> "
+define_prompts_variables () {
+    export PS1="%{[31;1m%}%T %{[32m%}%n@%{[32m%}%m%{[01;33m%}:%{[34;1m%}%0~%{[0m%}%{[01;33m%}%#%{[0m%} "
+    export RPS1="%{[36;1m%}$(echo_git_branch)%{[0m%} %(?.%{[92;1m%}✔%{[0m%}.%{[91;1m%}✘%{[0m%}"
+    # export RPROMPT="%{[36;1m%}%~%{[0m%}"
+    # export PS2="%{[36;1m%}%_ %{[0m%}> "
+}
+# redefine prompts variables to re-execute the functions in them
+precmd_functions+=( define_prompts_variables )
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/lib:/usr/local/lib"
 export GOPATH="$HOME/prg/go"
