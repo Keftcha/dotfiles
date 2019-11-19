@@ -103,6 +103,7 @@ alias gdf="git diff"
 alias gm="git merge"
 alias gcl="git clone"
 alias glg="git log --graph"
+alias gsh="git stash"
 # --------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------
