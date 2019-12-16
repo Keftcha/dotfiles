@@ -37,6 +37,6 @@ setxkbmap -layout fr &
 # Set the background
 ~/.fehbg &
 # Start the autolock script
-sh ~/auto_lock.sh &
+sh ~/dotfiles/script_bash/auto_lock.sh &
 # Start i3
 exec i3
