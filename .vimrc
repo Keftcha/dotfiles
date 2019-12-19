@@ -54,3 +54,6 @@ map <C-n> :NERDTreeToggle<CR>
 let g:pymode_lint = 0
 let g:pymode_lint_on_write = 0
 let g:pymode_rope = 0
+
+" vim-markdown options
+let g:vim_markdown_folding_disabled = 1
