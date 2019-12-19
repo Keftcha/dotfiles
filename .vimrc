@@ -41,7 +41,9 @@ au BufNewFile,BufRead *.md set filetype=markdown
 
 autocmd Filetype lua set textwidth=79
 
-autocmd BufWritePre * :%s/\s\+$//e
+" Don't remove useless spaces in this list of filetype
+let blacklisk_unwanted_spaces = ["markdown"]
+autocmd BufWritePre * if index(blacklisk_unwanted_spaces, &ft) < 0 | :%s/\s\+$//e
 
 map <C-w>s :split<CR>
 map <C-w>v :vsplit<CR>
