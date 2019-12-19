@@ -9,3 +9,6 @@ https://github.com/ycm-core/YouCompleteMe
 
 vim-flake8
 https://github.com/nvie/vim-flake8.git
+
+vim-markdown
+https://github.com/plasticboy/vim-markdown/
