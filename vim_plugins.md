@@ -13,7 +13,7 @@ https://github.com/ycm-core/YouCompleteMe
 https://github.com/nvie/vim-flake8.git
 
 - vim-markdown  
-https://github.com/plasticboy/vim-markdown/
+https://github.com/plasticboy/vim-markdown
 
 - rust.vim  
 https://github.com/rust-lang/rust.vim
