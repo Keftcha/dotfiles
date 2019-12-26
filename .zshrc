@@ -99,6 +99,7 @@ alias -s rs=e    # Rust file
 alias -s toml=e    # TOML file
 # alias -s rb=e    # Ruby file
 alias -s md=e    # Markdown file
+alias -s go=e    # Go file
 
 # Git
 alias ga="git add"
