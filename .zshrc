@@ -137,8 +137,16 @@ define_prompts_variables () {
 precmd_functions+=( define_prompts_variables )
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/lib:/usr/local/lib"
+
+# Go variables
 export GOPATH="$HOME/prg/go"
-export PATH="$PATH:$HOME/bin:/usr/lib/go-1.9/bin:$GOPATH/bin:$HOME/.cargo/bin"
+export GOROOT="/usr/lib/go"
+
+# PATH
+export PATH="$PATH::/usr/lib/go/bin"    # Go executable
+export PATH="$PATH:$GOPATH/bin"    # Go binaries
+export PATH="$PATH:$HOME/.cargo/bin"    # Rust tools
+export PATH="$PATH:$HOME/bin"    # Binaries files in home folder
 # --------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------
