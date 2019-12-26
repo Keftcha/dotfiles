@@ -15,8 +15,8 @@ https://github.com/nvie/vim-flake8.git
 - vim-markdown  
 https://github.com/plasticboy/vim-markdown/
 
-- rust.vim
+- rust.vim  
 https://github.com/rust-lang/rust.vim
 
-- vim-go
+- vim-go  
 https://github.com/fatih/vim-go
