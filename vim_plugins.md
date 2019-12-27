@@ -10,7 +10,7 @@ https://github.com/scrooloose/nerdtree
 https://github.com/ycm-core/YouCompleteMe
 
 - vim-flake8  
-https://github.com/nvie/vim-flake8.git
+https://github.com/nvie/vim-flake8
 
 - vim-markdown  
 https://github.com/plasticboy/vim-markdown
