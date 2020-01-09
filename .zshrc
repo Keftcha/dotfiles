@@ -143,7 +143,7 @@ export GOPATH="$HOME/prg/go"
 export GOROOT="/usr/lib/go"
 
 # PATH
-export PATH="$PATH:/usr/lib/go/bin"    # Go executable
+export PATH="$PATH:$GOROOT/bin"    # Go executable
 export PATH="$PATH:$GOPATH/bin"    # Go binaries
 export PATH="$PATH:$HOME/.cargo/bin"    # Rust tools
 export PATH="$PATH:$HOME/bin"    # Binaries files in home folder
