@@ -115,6 +115,7 @@ alias gcl="git clone"
 alias glg="git log --graph"
 alias gsh="git stash"
 alias gsl="git shortlog -sn"
+alias grb="git rebase"
 # --------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------
