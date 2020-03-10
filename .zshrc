@@ -116,6 +116,13 @@ alias glg="git log --graph"
 alias gsh="git stash"
 alias gsl="git shortlog -sn"
 alias grb="git rebase"
+
+# Docker
+alias dc="docker-compose"
+alias dimg="docker image"
+alias dctn="docker container"
+alias dvlm="docker volume"
+alias dsp="docker system prune"
 # --------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------
@@ -172,4 +179,8 @@ bindkey "^[[1;5D" backward-word    # Ctrl + ←
 bindkey "^?" backward-delete-char    # Backspace
 bindkey "^[[A" history-beginning-search-backward-end    # ↑
 bindkey "^[[B" history-beginning-search-forward-end    # ↓
+# --------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------
+# Other
 # --------------------------------------------------------------------------
