@@ -20,3 +20,6 @@ https://github.com/rust-lang/rust.vim
 
 - vim-go  
 https://github.com/fatih/vim-go
+
+- haskell-vim  
+https://github.com/neovimhaskell/haskell-vim
