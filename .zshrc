@@ -113,9 +113,10 @@ alias gdf="git diff"
 alias gm="git merge"
 alias gcl="git clone"
 alias glg="git log --graph"
-alias gsh="git stash"
+alias gfh="git fetch"
 alias gsl="git shortlog -sn"
 alias grb="git rebase"
+alias gsh="git stash"
 
 # Docker
 alias dc="docker-compose"
