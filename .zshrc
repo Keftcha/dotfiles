@@ -117,6 +117,7 @@ alias gfh="git fetch"
 alias gsl="git shortlog -sn"
 alias grb="git rebase"
 alias gsh="git stash"
+alias gblm="git blame"
 
 # Docker
 alias dc="docker-compose"
