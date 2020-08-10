@@ -86,20 +86,14 @@ alias please="sudo"
 alias -g g="| grep"
 
 # Suffix alias
-alias -s c=e
-alias -s cc=e
-alias -s cpp=e
-alias -s h=e
-alias -s hpp=e
-alias -s hxx=e
-alias -s tpp=e
+alias -s go=e    # Go file
+alias -s hs=e    # Haskell file
+alias -s md=e    # Markdown file
 alias -s pdf=evince    # Pdf file
 # alias -s py=e    # Python file
+# alias -s rb=e    # Ruby file
 alias -s rs=e    # Rust file
 alias -s toml=e    # TOML file
-# alias -s rb=e    # Ruby file
-alias -s md=e    # Markdown file
-alias -s go=e    # Go file
 
 # Git
 alias ga="git add"
