@@ -24,9 +24,11 @@ scrot
 setxkbmap
 sudo
 vim
+wget
 wpa_supplicant
 xautolock
 xorg
 xorg-xinit
 xrandr
 xterm
+zsh
