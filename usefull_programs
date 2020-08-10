@@ -24,6 +24,7 @@ scrot
 setxkbmap
 sudo
 vim
+wget
 wpa_supplicant
 xautolock
 xorg
