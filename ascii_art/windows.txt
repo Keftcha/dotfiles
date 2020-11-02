@@ -1,0 +1,16 @@
+[?25l[?7l[0m[31m[1m        ,.=:!!t3Z3z.,
+       :tt:::tt333EE3
+[0m[31m[1m       Et:::ztt33EEEL[0m[32m[1m @Ee.,      ..,
+[0m[31m[1m      ;tt:::tt333EE7[0m[32m[1m ;EEEEEEttttt33#
+[0m[31m[1m     :Et:::zt333EEQ.[0m[32m[1m $EEEEEttttt33QL
+[0m[31m[1m     it::::tt333EEF[0m[32m[1m @EEEEEEttttt33F
+[0m[31m[1m    ;3=*^```"*4EEV[0m[32m[1m :EEEEEEttttt33@.
+[0m[34m[1m    ,.=::::!t=., [0m[31m[1m`[0m[32m[1m @EEEEEEtttz33QF
+[0m[34m[1m   ;::::::::zt33)[0m[32m[1m   "4EEEtttji3P*
+[0m[34m[1m  :t::::::::tt33.[0m[33m[1m:Z3z..[0m[32m[1m  ``[0m[33m[1m ,..g.
+[0m[34m[1m  i::::::::zt33F[0m[33m[1m AEEEtttt::::ztF
+[0m[34m[1m ;:::::::::t33V[0m[33m[1m ;EEEttttt::::t3
+[0m[34m[1m E::::::::zt33L[0m[33m[1m @EEEtttt::::z3F
+[0m[34m[1m{3=*^```"*4E3)[0m[33m[1m ;EEEtttt:::::tZ`
+[0m[34m[1m             `[0m[33m[1m :EEEEtttt::::z7
+                 "VEzjt:;;z>*`[0m
