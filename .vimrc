@@ -26,6 +26,7 @@ set expandtab
 set textwidth=79
 set hlsearch
 set completeopt=longest,menuone
+set wildmenu
 
 au BufNewFile,BufRead *.processconf2 set filetype=perl
 au BufNewFile,BufRead *.owl set filetype=perl
