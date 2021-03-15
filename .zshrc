@@ -33,7 +33,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # --------------------------------------------------------------------------
-# Options zsh interne et shell
+# Options for interne zsh and shell
 # --------------------------------------------------------------------------
 autoload -U colors
 colors
@@ -53,6 +53,10 @@ setopt interactivecomments
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
+
+zmodload zsh/complist    # Load completion list extension
+bindkey -M menuselect "^I" menu-complete    # Tab
+bindkey -M menuselect "^[[Z" reverse-menu-complete    # Maj + Tab
 # --------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------
