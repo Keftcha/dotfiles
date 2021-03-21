@@ -98,6 +98,7 @@ alias -s pdf=evince    # Pdf file
 # alias -s rb=e    # Ruby file
 alias -s rs=e    # Rust file
 alias -s toml=e    # TOML file
+alias -s zig=e    # Zig file
 
 # Git
 alias ga="git add"
