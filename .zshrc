@@ -88,6 +88,7 @@ alias please="sudo"
 
 # Global alias
 alias -g g="| grep"
+alias -g l="| less -r"
 
 # Suffix alias
 alias -s go=e    # Go file
@@ -185,7 +186,7 @@ bindkey "^[[B" history-beginning-search-forward-end    # ↓
 # --------------------------------------------------------------------------
 # Start X server at login when in tty1 (compatible with Arch and Gentoo)
 # --------------------------------------------------------------------------
-if [[ -z $DISPLAY ]]  && [[ $XDG_VTNR -eq 1 || $(tty) == /dev/tty1 ]]; then
+if [[ -z $DISPLAY ]] && [[ $XDG_VTNR -eq 1 || $(tty) == /dev/tty1 ]]; then
     exec startx
 fi
 # --------------------------------------------------------------------------
