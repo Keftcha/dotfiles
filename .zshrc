@@ -37,7 +37,7 @@ bindkey -v
 # --------------------------------------------------------------------------
 autoload -U colors
 colors
-setopt correctall
+unsetopt correctall
 setopt hist_ignore_all_dups
 setopt No_Beep
 setopt complete_in_word
