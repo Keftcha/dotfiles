@@ -49,6 +49,9 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown    " Set filetype to `mark
 let blacklisk_unwanted_spaces = ["markdown"]
 autocmd BufWritePre * if index(blacklisk_unwanted_spaces, &ft) < 0 | :%s/\s\+$//e
 
+" Delete trailing empty lines at end of file
+autocmd BufWritePre * :%s#\($\n\s*\)\+\%$##
+
 " Some keybind
 map <C-w>s :split<CR>
 map <C-w>v :vsplit<CR>
