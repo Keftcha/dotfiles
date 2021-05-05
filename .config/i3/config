@@ -30,7 +30,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec uxterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -116,6 +117,11 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+# use Ctrl+Alt+arrow (← or →) to switch workspace
+bindsym Control+Mod1+Right workspace next
+bindsym Control+Mod1+Left workspace prev
+# jump to last used workspace
+bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -130,7 +136,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+w reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -139,27 +145,27 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym m resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym m resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    # back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -167,86 +173,100 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/.config/i3/i3status.conf
-        position top
+    status_command i3status --config ~/.config/i3/i3status.conf
+    position top
 
-	colors {
-		background      #000000
-		statusline      #ffffff
-		separator       #666666
+    colors {
+        background      #000000
+        statusline      #ffffff
+        separator       #666666
 
-		# <colorclass> <border> <background> <text>
+        # <colorclass> <border> <background> <text>
 
-		# Red theme
-		#focused_workspace  #990000 #cc0000 #000000
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #b30000 #800000 #1a0000
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
+        # Red theme (aka Debian theme)
+        #focused_workspace  #990000 #222222 #ffffff
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #990000 #330000 #888888
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-		# Orange theme
-		#focused_workspace  #ff6600 #b34700 #ffffff
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #993d00 #331400 #888888
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
+        # Redder theme
+        #focused_workspace  #990000 #cc0000 #000000
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #b30000 #800000 #1a0000
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-		# Yellow theme
-		#focused_workspace  #cccc00 #ffff00 #000000
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #808000 #666600 #e6e600
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
+        # Orange theme (aka Ubuntu theme)
+        #focused_workspace  #ff6600 #b34700 #ffffff
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #993d00 #331400 #888888
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-		# Green theme
-		#focused_workspace  #009900 #00cc00 #000000
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #006600 #004d00 #009900
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
+        # Yellow theme
+        #focused_workspace  #cccc00 #ffff00 #000000
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #808000 #666600 #e6e600
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-		# Blue theme (aka default theme)
-		#focused_workspace  #4c7899 #285577 #ffffff
-		#active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #333333 #222222 #888888
-		#urgent_workspace   #2f343a #900000 #ffffff
-		#binding_mode       #2f343a #900000 #ffffff
+        # Green theme (aka openSuse theme)
+        #focused_workspace  #009900 #00cc00 #000000
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #006600 #003300 #888888
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-		# Dark Blue theme
-		#focused_workspace  #6666ff #1a1aff #000000
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #000099 #00004d #0000ff
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
+        # Greenner theme
+        #focused_workspace  #009900 #00cc00 #000000
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #006600 #004d00 #009900
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-		# Purple theme (aka Gentoo theme)
-		#focused_workspace  #493f6a #54487a #dddaec
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #4b446f #151320 #928ac1
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
+        # Blue theme (aka default theme)
+        #focused_workspace  #4c7899 #285577 #ffffff
+        #active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #333333 #222222 #888888
+        #urgent_workspace   #2f343a #900000 #ffffff
+        #binding_mode       #2f343a #900000 #ffffff
 
-                # Pink theme
-		#focused_workspace  #cc0052 #cc0052 #66ffff
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #800033 #1a0000a #66ffff
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
+        # Dark Blue theme
+        #focused_workspace  #6666ff #1a1aff #000000
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #000099 #00004d #0000ff
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-                # Yellow and Blue theme
-		focused_workspace  #0000ff #ffff00 #000000
-		#active_workspace   #333333 #5f676a #ffffff
-		inactive_workspace #00004d #666600 #e6e600
-		#urgent_workspace   #2f343a #900000 #ffffff
-		#binding_mode       #2f343a #900000 #ffffff
+        # Purple theme (aka Gentoo theme)
+        #focused_workspace  #493f6a #54487a #dddaec
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #4b446f #151320 #928ac1
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
 
-		# Blue and black theme (aka Archlinux theme)
-		#focused_workspace  #0088cc #222222 #ffffff
-		##active_workspace   #333333 #5f676a #ffffff
-		#inactive_workspace #0088cc #040f16 #33aadd
-		##urgent_workspace   #2f343a #900000 #ffffff
-		##binding_mode       #2f343a #900000 #ffffff
-	}
+        # Pink theme
+        #focused_workspace  #cc0052 #cc0052 #66ffff
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #800033 #1a0000a #66ffff
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
+
+        # Yellow and Blue theme
+        #focused_workspace  #0000ff #ffff00 #000000
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #00004d #666600 #e6e600
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
+
+        # Blue and black theme (aka Archlinux theme)
+        #focused_workspace  #0088cc #222222 #ffffff
+        ##active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #0088cc #040f16 #33aadd
+        ##urgent_workspace   #2f343a #900000 #ffffff
+        ##binding_mode       #2f343a #900000 #ffffff
+    }
 }
 
 # Active windown isn't the windows where is the mouse cursor is
@@ -268,34 +288,50 @@ mouse_warping none
 ####################################################################################
 # class                 border  backgr. text    indicator child_border
 
-# Red theme
-#client.focused          #990000 #cc0000 #000000 #2e9ef4   #cc0000
-#client.focused_inactive #b30000 #800000 #000000 #484e50   #800000
-#client.unfocused        #b30000 #4d0000 #1a0000 #292d2e   #4d0000
+# Red theme (aka Debian theme)
+#client.focused          #990000 #222222 #ffffff #ff3333   #cc0000
+#client.focused_inactive #b30000 #660000 #595959 #b30000   #800000
+#client.unfocused        #b30000 #330000 #333333 #800000   #4d0000
+##client.urgent           #2f343a #900000 #ffffff #900000   #900000
+##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.background       #000000
+
+# Redder theme
+#client.focused          #990000 #cc0000 #000000 #ff3333   #cc0000
+#client.focused_inactive #b30000 #800000 #000000 #b30000   #800000
+#client.unfocused        #b30000 #4d0000 #1a0000 #80000   #4d0000
 ##client.urgent           #2f343a #900000 #ffffff #900000   #900000
 ##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #000000
 
 # Orange theme
-#client.focused          #ff6600 #b34700 #ffffff #2e9ef4   #b34700
-#client.focused_inactive #993d00 #662900 #ffffff #484e50   #662900
-#client.unfocused        #993d00 #331400 #888888 #292d2e   #331400
+#client.focused          #ff6600 #b34700 #ffffff #ff754a   #b34700
+#client.focused_inactive #993d00 #662900 #ffffff #b34700   #662900
+#client.unfocused        #993d00 #331400 #888888 #993d00   #331400
 ##client.urgent           #2f343a #900000 #ffffff #900000   #900000
 ##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #ffffff
 
 # Yellow theme
-#client.focused          #cccc00 #ffff00 #000000 #2e9ef4   #ffff00
-#client.focused_inactive #808000 #999900 #000000 #484e50   #999900
-#client.unfocused        #808000 #666600 #e6e600 #292d2e   #666600
+#client.focused          #cccc00 #ffff00 #000000 #ffff66   #ffff00
+#client.focused_inactive #808000 #999900 #000000 #4d4d00   #999900
+#client.unfocused        #808000 #666600 #e6e600 #333300   #666600
 ##client.urgent           #2f343a #900000 #ffffff #900000   #900000
 ##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #ffffff
 
-# Green theme
-#client.focused          #009900 #00cc00 #000000 #2e9ef4   #00cc00
-#client.focused_inactive #006600 #004d00 #009900 #484e50   #004d00
-#client.unfocused        #006600 #001a00 #000000 #292d2e   #001a00
+# Green theme (aka openSuse theme)
+#client.focused          #009900 #00cc00 #000000 #4dff4d   #00cc00
+#client.focused_inactive #006600 #001a00 #888888 #00b300   #004d00
+#client.unfocused        #006600 #001a00 #000000 #008000   #001a00
+##client.urgent           #2f343a #900000 #ffffff #900000   #900000
+##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.background       #ffffff
+
+# Greenner theme
+#client.focused          #009900 #00cc00 #000000 #4dff4d   #00cc00
+#client.focused_inactive #006600 #004d00 #009900 #00b300   #004d00
+#client.unfocused        #006600 #001a00 #000000 #008000   #001a00
 ##client.urgent           #2f343a #900000 #ffffff #900000   #900000
 ##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #ffffff
@@ -310,14 +346,14 @@ mouse_warping none
 
 # Dark Blue theme
 #client.focused          #6666ff #1a1aff #000000 #2e9ef4   #1a1aff
-#client.focused_inactive #000099 #00004d #0000ff #484e50   #00004d
-#client.unfocused        #00004d #00001a #000080 #292d2e   #00001a
+#client.focused_inactive #000099 #00004d #0000ff #000033   #00004d
+#client.unfocused        #00004d #00001a #000080 #00001a   #00001a
 ##client.urgent           #2f343a #900000 #ffffff #900000   #900000
 ##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #ffffff
 
 # Purple theme (aka Gentoo theme)
-#client.focused          #493f6a #54487a #dddaec #2e9ef4   #54487a
+#client.focused          #493f6a #54487a #dddaec #7c6eaa   #54487a
 #client.focused_inactive #4b446f #2b273f #dddaec #292d2e   #2b273f
 #client.unfocused        #4b446f #151320 #928ac1 #484e50   #151320
 ##client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -325,20 +361,20 @@ mouse_warping none
 #client.background       #000000
 
 # Pink theme
-#client.focused          #cc0052 #cc0052 #66ffff #2e9ef4   #cc0052
-#client.focused_inactive #800033 #4d001f #00cccc #292d2e   #330014
-#client.unfocused        #800033 #1a000a #66ffff #484e50   #1a000a
+#client.focused          #cc0052 #cc0052 #66ffff #ff3385   #cc0052
+#client.focused_inactive #800033 #4d001f #00cccc #4d001f   #330014
+#client.unfocused        #800033 #1a000a #66ffff #1a000a   #1a000a
 ##client.urgent           #2f343a #900000 #ffffff #900000   #900000
 ##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #000000
 
 # Yellow and Blue theme
-client.focused          #0000ff #ffff00 #000000 #2e9ef4   #0000ff
-client.focused_inactive #000099 #999900 #000000 #484e50   #000099
-client.unfocused        #00004d #666600 #e6e600 #292d2e   #00004d
-#client.urgent           #2f343a #900000 #ffffff #900000   #900000
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #000000
+#client.focused          #0000ff #ffff00 #000000 #2e9ef4   #0000ff
+#client.focused_inactive #000099 #999900 #000000 #000033   #000099
+#client.unfocused        #00004d #666600 #e6e600 #00001a   #00004d
+##client.urgent           #2f343a #900000 #ffffff #900000   #900000
+##client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.background       #000000
 
 # Blue and black theme (aka Archlinux theme)
 #client.focused          #0088cc #222222 #ffffff #2e9ef4   #0088cc
