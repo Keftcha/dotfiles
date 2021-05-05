@@ -50,7 +50,7 @@ let blacklisk_unwanted_spaces = ["markdown"]
 autocmd BufWritePre * if index(blacklisk_unwanted_spaces, &ft) < 0 | :%s/\s\+$//e
 
 " Delete trailing empty lines at end of file
-autocmd BufWritePre * :%s#\($\n\s*\)\+\%$##
+autocmd BufWritePre * :%s/\($\n\s*\)\+\%$//e
 
 " Some keybind
 map <C-w>s :split<CR>
