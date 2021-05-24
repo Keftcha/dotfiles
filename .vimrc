@@ -47,7 +47,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown    " Set filetype to `mark
 
 " Don't remove useless spaces in this list of filetype
 let blacklisk_unwanted_spaces = ["markdown"]
-autocmd BufWritePre * if index(blacklisk_unwanted_spaces, &ft) < 0 | :%s/\s\+$//e
+autocmd BufWritePre * if index(blacklisk_unwanted_spaces, &ft) < 0 | :%s/\s\+$//e | endif
 
 " Delete trailing empty lines at end of file
 autocmd BufWritePre * :%s/\($\n\s*\)\+\%$//e
@@ -57,6 +57,7 @@ map <C-w>s :split<CR>
 map <C-w>v :vsplit<CR>
 map <C-w>t :tabnew<CR>
 map <C-n> :NERDTreeToggle<CR>
+map <C-t> :tab term<CR>
 """
 
 " vim-flake8 options
