@@ -81,6 +81,7 @@ alias e="vim"
 alias weechat="weechat-curses"
 alias dd="dd status=progress"
 alias :q="exit"
+alias vt="vim -c \"exe 'term' | exe 'wincmd w' | q\""
 
 # Joke
 alias gtfo="poweroff"
