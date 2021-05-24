@@ -80,6 +80,7 @@ alias mv="mv -i"
 alias e="vim"
 alias weechat="weechat-curses"
 alias dd="dd status=progress"
+alias :q="exit"
 
 # Joke
 alias gtfo="poweroff"
