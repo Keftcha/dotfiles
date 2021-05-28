@@ -43,7 +43,7 @@ autocmd Filetype python set softtabstop=4
 
 " Markdown settings
 autocmd BufNewFile,BufRead *.md set filetype=markdown    " Set filetype to `markdown` on file with the .md extension
-""
+"""
 
 " Don't remove useless spaces in this list of filetype
 let blacklisk_unwanted_spaces = ["markdown"]
