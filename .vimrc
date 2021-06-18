@@ -21,7 +21,7 @@ set foldlevelstart=99              " Open all folds when opening a file
 set foldmethod=indent              " Fold with indentation levels
 set hlsearch                       " Highlight search matches
 set ignorecase                     " Insensitive search
-set mouse=n                        " Disable use of the mouse
+set mouse=n                        " Enable mouse only in Normal and Terminal modes
 set nocompatible                   " Set vim no compatible with Vi
 set number                         " Display line numbers
 set softtabstop=4                  " A tab is 4 spaces
