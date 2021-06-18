@@ -98,9 +98,9 @@ alias -s hs=e    # Haskell file
 alias -s md=e    # Markdown file
 alias -s pdf=evince    # Pdf file
 # alias -s py=e    # Python file
-# alias -s rb=e    # Ruby file
 alias -s rs=e    # Rust file
 alias -s toml=e    # TOML file
+alias -s yaml=e    # YAML file
 alias -s zig=e    # Zig file
 
 # Git
