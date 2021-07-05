@@ -34,11 +34,8 @@ set wildmenu                       " Show completion menu for command-line mode
 """
 
 " Python settings
-autocmd Filetype python set completeopt=menu
-autocmd Filetype python set tabstop=4
+autocmd BufWritePre *.py Black    " Auto format code with black on save
 autocmd Filetype python set textwidth=79
-autocmd Filetype python set shiftwidth=4
-autocmd Filetype python set softtabstop=4
 """
 
 " Markdown settings
@@ -58,12 +55,6 @@ map <C-w>v :vsplit<CR>
 map <C-w>t :tabnew<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-t> :tab term<CR>
-"""
-
-" vim-flake8 options
-let g:pymode_lint=0
-let g:pymode_lint_on_write=0
-let g:pymode_rope=0
 """
 
 " vim-markdown options

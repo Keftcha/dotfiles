@@ -9,8 +9,8 @@ https://github.com/scrooloose/nerdtree
 - YouCompleteMe  
 https://github.com/ycm-core/YouCompleteMe
 
-- vim-flake8  
-https://github.com/nvie/vim-flake8
+- black  
+https://black.readthedocs.io/en/stable/integrations/editors.html#vim
 
 - vim-markdown  
 https://github.com/plasticboy/vim-markdown
