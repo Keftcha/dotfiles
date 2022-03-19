@@ -63,7 +63,9 @@ bindkey -M menuselect "^[[Z" reverse-menu-complete    # Maj + Tab
 # Functions
 # --------------------------------------------------------------------------
 echo_git_branch() {
-    echo "$(command git symbolic-ref --short HEAD 2> /dev/null)"
+    branch="$(command git symbolic-ref --short HEAD 2> /dev/null)"
+    commit="$(command git rev-parse --short HEAD 2> /dev/null)"
+    [ ! -z "$branch" ] && echo "$branch" || echo "$commit"
 }
 # --------------------------------------------------------------------------
 
@@ -82,6 +84,7 @@ alias weechat="weechat-curses"
 alias dd="dd status=progress"
 alias :q="exit"
 alias vt="vim -c \"exe 'term' | exe 'wincmd w' | q\""
+alias k="kubectl"
 
 # Joke
 alias gtfo="poweroff"
