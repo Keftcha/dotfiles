@@ -34,7 +34,7 @@ set wildmenu                       " Show completion menu for command-line mode
 """
 
 " Python settings
-autocmd BufWritePre *.py Black    " Auto format code with black on save
+autocmd BufWritePre *.py Black
 autocmd Filetype python set textwidth=79
 """
 
